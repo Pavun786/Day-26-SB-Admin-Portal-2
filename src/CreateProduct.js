@@ -39,7 +39,7 @@ function CreateProduct(){
         onSubmit: async(values)=>{
             // this is POST Methoed,used for create a new data & add it
             
-            let user= await axios.post("https://63770e2281a568fc250af260.mockapi.io/users",values)
+            let user= await axios.post("https://63770e2281a568fc250af260.mockapi.io/user",values)
             navigate("/portal/products")
             alert("Product Created")
         }

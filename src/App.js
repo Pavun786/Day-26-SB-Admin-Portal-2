@@ -12,9 +12,11 @@ import Portal from './Portal';
 import UserView from './Userview';
 import EditUser from './EditUser';
 import Products from './Products';
+import ProductView from './ProductView';
 import CreateProduct from './CreateProduct';
 import { UserProvider } from './Contex';
 import Profile from './Profile';
+import EditProduct from './EditProduct';
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
 
          <Route path="createuser" element={<CreateUser/>}/>
          <Route path="products" element={<Products/>} />
+         <Route path="product/:id" element={<ProductView/>} />
+         <Route path="product/edit/:id" element={<EditProduct/>} />
          <Route path="createproduct" element={<CreateProduct/>}/>
          </Route> 
          </Routes> 

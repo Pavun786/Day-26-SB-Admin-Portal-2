@@ -21,13 +21,13 @@ function Products(){
        setLoading(false)
    }
 
-   let userDelete = async (id)=>{
+   let productDelete = async (id)=>{
    
      try{
          let ask= window.confirm("Do you want to delete this data.?"
          );
          if(ask){
-             await axios.delete(`https://63770e2281a568fc250af260.mockapi.io/users/${id}`);
+             await axios.delete(`https://63770e2281a568fc250af260.mockapi.io/user/${id}`);
              loadData();
          }
      }catch (error){
@@ -89,9 +89,9 @@ function Products(){
                            <td>{product.Fuel}</td>
                            <td>{product.Price}</td>
                            <td>
-                                    <Link to={`/portal/products/${product.id}`} className="btn btn-sm btn-warning mr-2">View</Link>
-                                    <Link to={`/portal/user/edit/${product.id}`} className="btn btn-sm btn-primary mr-2">Edit</Link>
-                                    <button onClick={()=>userDelete(product.id)} className="btn btn-sm btn-danger mr-2">Delete</button>
+                                    <Link to={`/portal/product/${product.id}`} className="btn btn-sm btn-warning mr-2">View</Link>
+                                    <Link to={`/portal/product/edit/${product.id}`} className="btn btn-sm btn-primary mr-2">Edit</Link>
+                                    <button onClick={()=>productDelete(product.id)} className="btn btn-sm btn-danger mr-2">Delete</button>
                                 </td>
                        </tr>
                    })}
